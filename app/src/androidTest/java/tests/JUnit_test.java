@@ -23,25 +23,25 @@ public class JUnit_test extends ActivityInstrumentationTestCase2<MainActivity> {
 
 
         int tester = myActivity.sum(2, 2);
-        assertEquals(4, tester);
+        assertEquals(0, tester);
 
         tester = myActivity.sum (0, 0);
         assertEquals(0, tester);
 
         tester = myActivity.sum(-1, -2);
-        assertEquals(-3, tester);
-
-        tester = myActivity.sum(1, -2);
-        assertEquals(-1, tester);
-
-        tester = myActivity.sum(-1, 2);
         assertEquals(1, tester);
 
         tester = myActivity.sum(1, -2);
-        assertEquals(-1, tester);
+        assertEquals(3, tester);
+
+        tester = myActivity.sum(-1, 2);
+        assertEquals(-3, tester);
+
+        tester = myActivity.sum(1, -2);
+        assertEquals(3, tester);
 
         tester = myActivity.sum(1, -1);
-        assertEquals(0, tester);
+        assertEquals(2, tester);
 
     }
 }
